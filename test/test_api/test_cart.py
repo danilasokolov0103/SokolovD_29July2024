@@ -9,13 +9,14 @@ test_goods_ids = [3043197, 3046928]
 @allure.feature("Коризна")
 @pytest.mark.api
 class TestCart:
-
+    @staticmethod
     @pytest.mark.parametrize('goods_id', test_goods_ids)
     @allure.title("Добавление и удаление товаров в корзину")
     def test_add_item_to_cart(goods_id):
         cart_item_id = check_add_item_to_cart(goods_id)
         check_delete_item_from_cart(cart_item_id)
 
+    @staticmethod
     @allure.title("Удаление всех товаров из корзины")
     def test_delete_all_items_in_cart():
         add_multiple_items(test_goods_ids)
