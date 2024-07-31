@@ -2,6 +2,7 @@ import pytest
 import allure
 from test_logic_api.add_delete_item_cart import check_add_item_to_cart, check_delete_item_from_cart
 from test_logic_api.delete_all_items_cart import add_multiple_items, check_delete_all_items_from_cart
+
 test_goods_ids = [3043197, 3046928]
 
 
